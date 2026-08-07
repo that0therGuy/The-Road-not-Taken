@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Road Not Taken</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/typeit@8.8.7/dist/index.umd.js"></script>
+</head>
+<body>
+<div id="container">
+    <div class="h1div">
+
+        <div class="buttons">
+
+            <div class="button">
+
+                <img src="mario.gif" id="mario" width="75">
+                <p class="click" id="comp">Computers</p><br>
+                <pre id="compl"> </pre>
+            </div>
+            <div class="button">
+                <img src="what.gif" id="die" width="75">
+
+                <p class="click" id="acad">Academia</p><br>
+                <pre id="acadl"> </pre>
+
+            </div>
+        </div>
+        <div class="h1div2">
+
+            <h1>My Travelling<br><span id="road">necessities</span></h1>
+
+        </div>
+
+        <img src="squid.gif" id="what" width="200">
+        <div class="buttons">
+            <div class="button">
+                <img src="money.gif" id="money" width="75">
+
+                <p class="click" id="busi">Business</p><br>
+                <pre id="busil"> </pre>
+
+            </div>
+            <div class="button">
+                <img src="mush.gif" id="mush" width="75">
+
+                <p class="click" id="spor">Sports</p><br>
+                <pre id="sporl"> </pre>
+
+            </div>
+        </div>
+    </div>
+
+
+        <div class="infobox">
+            <h2 id="h"></h2>
+            <p id="p"></p>
+        </div>
+
+
+
+</div>
+
+
+<style>
+
+    .infobox{
+        opacity:0;
+        display:none;
+        width:0;
+        height:0;
+        border:2px solid #9f795c;
+        border-radius:7px;
+        background: linear-gradient(45deg, rgb(200 115 54 / 0.1) 0%, rgb(179 147 66 / 0.1) 100%);
+        transition: all .5s;
+        padding:30px;
+        font-family: 'astloch', cursive;
+        font-size:2em;
+        color: #937656;
+        font-weight:800;
+        text-decoration-inset: 40px;
+        text-underline-offset: 10px;
+        flex-direction: column;
+        gap:20px;
+        text-align:center;
+        max-height:fit-content !important;
+        overflow-y: auto;
+
+
+
+    }
+    #h,#p{
+        margin:0;
+        padding:0;
+    }
+    h1{
+        text-align: center;
+        transition: all 2s;
+    }
+    .buttons{
+
+        gap:90px;
+    }
+    .button{
+        display: flex;
+        margin:0;
+        padding:0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap:0;
+    }
+    .h1div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:100px;
+    }
+    #what{
+        position:absolute;
+        top:50%;
+        z-index:10;
+        transition: all .4s;
+    }.click{
+         transition: all .3s;
+         text-decoration:underline;
+         text-decoration-inset: 40px;
+         text-underline-offset: 20px;
+
+     }
+    .click:hover{
+        transform: scale(1.02);
+        text-decoration-inset: 0;
+    }
+    #road{
+        text-shadow: 0 0 5px #ff865f;
+
+    }
+    p{
+        font-family:'Fredericka the Great';
+        font-weight:bolder;
+        margin:10px;
+    }
+    #compl,#acadl,#busil,#sporl{
+        font-size:.5em;
+        font-family:'pirata one';
+
+    }
+    #mario{
+        position: absolute;
+        top:29%;
+    }
+    #money{
+        position: absolute;
+        top:30%;
+    }
+    #mush{
+        position: absolute;
+        top:47%;
+
+    }
+    #die{
+        position: absolute;
+        top:45.5%;
+
+    }
+
+
+
+
+</style>
+
+<script>
+
+
+
+    let comp= document.querySelector('#comp');
+    let acad= document.querySelector('#acad');
+    let spor= document.querySelector('#spor');
+    let busi= document.querySelector('#busi');
+
+    comp.addEventListener('mouseenter',()=>{
+        acad.classList.add('na');
+        spor.classList.add('na');
+        busi.classList.add('na');
+
+        comp.classList.remove('na');
+
+    })
+    comp.addEventListener('mouseleave',()=>{
+        comp.classList.remove('na');
+        acad.classList.remove('na');
+        spor.classList.remove('na');
+        busi.classList.remove('na');
+    })
+
+    acad.addEventListener('mouseenter',()=>{
+        comp.classList.add('na');
+        spor.classList.add('na');
+        busi.classList.add('na');
+
+        acad.classList.remove('na');
+
+    })
+    acad.addEventListener('mouseleave',()=>{
+        comp.classList.remove('na');
+        acad.classList.remove('na');
+        spor.classList.remove('na');
+        busi.classList.remove('na');
+    })
+
+    busi.addEventListener('mouseenter',()=>{
+        acad.classList.add('na');
+        spor.classList.add('na');
+        comp.classList.add('na');
+
+        busi.classList.remove('na');
+
+    })
+    busi.addEventListener('mouseleave',()=>{
+        comp.classList.remove('na');
+        acad.classList.remove('na');
+        spor.classList.remove('na');
+        busi.classList.remove('na');
+    })
+
+    spor.addEventListener('mouseenter',()=>{
+        acad.classList.add('na');
+        comp.classList.add('na');
+        busi.classList.add('na');
+
+        spor.classList.remove('na');
+
+    })
+    spor.addEventListener('mouseleave',()=>{
+        comp.classList.remove('na');
+        acad.classList.remove('na');
+        spor.classList.remove('na');
+        busi.classList.remove('na');
+    })
+
+
+    document.getElementById('comp').addEventListener('click',()=>{
+
+        new TypeIt("#compl", {
+            strings: 'Engineering, gaming and Netflix',
+            speed: 1,
+            waitUntilVisible: true,
+        }).go();
+
+
+
+
+    })
+    document.getElementById('acad').addEventListener('click',()=>{
+
+        new TypeIt("#acadl", {
+            strings: 'Science, Technology and Philosophy',
+            speed: 1,
+            waitUntilVisible: true,
+        }).go();
+
+
+
+
+    })
+    document.getElementById('spor').addEventListener('click',()=>{
+
+        new TypeIt("#sporl", {
+            strings: 'Football, Badminton, Table Tennis',
+            speed: 1,
+            waitUntilVisible: true,
+        }).go();
+
+
+
+
+    })
+    document.getElementById('busi').addEventListener('click',()=>{
+
+        new TypeIt("#busil", {
+            strings: 'Buying and Selling Video Games',
+            speed: 1,
+            waitUntilVisible: true,
+        }).go();
+
+
+
+
+    })
+
+</script>
+</body>
+</html>
