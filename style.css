@@ -24,6 +24,7 @@ h1{
     text-decoration-thickness: 2px;
     text-decoration-color: #ba7f3b;
 
+
 }
 body{
     background: #a7fcfc;
@@ -36,7 +37,11 @@ body{
     justify-content: center;
     height: 100vh;
     gap:0;
+
+    position: relative;
+
 }
+
 #road,#taken{
     font-size:2em;
     font-weight: bold;
@@ -119,8 +124,10 @@ a{
 }
 #pikachu{
     position:absolute;
-    top:30.9%;
-    left:30.5%;
+
+    transform: translate(-198%, -140%);
+
+
 }
 .buttons{
     display: flex;
