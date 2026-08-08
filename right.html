@@ -13,7 +13,7 @@
 
         <div class="buttons">
 
-            <div class="button">
+            <div class="button sil">
                 <div class="imgdiv">
 
                     <img src="lsd.gif" id="mario" width="75">
@@ -26,7 +26,7 @@
 
                 </div>
             </div>
-            <div class="button">
+            <div class="button tun">
                 <div class="imgdiv">
 
                     <img src="homer.gif" id="die" width="75">
@@ -49,7 +49,7 @@
         <img src="squid.gif" id="what" width="200">
         <div class="buttons">
 
-            <div class="button">
+            <div class="button bau">
                 <div class="imgdiv">
 
                     <img src="birb.gif" id="money" width="75">
@@ -62,11 +62,11 @@
                 </div>
             </div>
 
-            <div class="button">
+            <div class="button aur">
                 <div class="imgdiv">
 
                     <img src="mush.gif" id="mush" width="65">
-                    <p class="click" id="spor">Aurum</p><br>
+                    <p class="click" id="spor">Silicon-Js</p><br>
                 </div>
 
                 <div class="prediv">
@@ -240,6 +240,8 @@
     let spor= document.querySelector('#spor');
     let busi= document.querySelector('#busi');
 
+
+
     comp.addEventListener('mouseenter',()=>{
         acad.classList.add('na');
         spor.classList.add('na');
@@ -328,11 +330,10 @@
     document.getElementById('spor').addEventListener('click',()=>{
 
         new TypeIt("#sporl", {
-            strings: 'A Centralized Place to Store Your Game Keys and Strategize.',
+            strings: 'A Javascript Code Editor Emphasizing Its Sandbox Nature.',
             speed: 1,
             waitUntilVisible: true,
         }).go();
-
 
 
 
@@ -340,7 +341,7 @@
     document.getElementById('busi').addEventListener('click',()=>{
 
         new TypeIt("#busil", {
-            strings: 'A Console-Like Frontend For Games.',
+            strings: 'A Centralized Place to Store Your Game Keys and Strategize.',
             speed: 1,
             waitUntilVisible: true,
         }).go();
@@ -353,6 +354,18 @@
     busi.click()
     spor.click()
     acad.click()
+    comp.onclick=()=>{
+        window.open('https://silicon-py.netlify.app',target='_blank');
+    }
+    acad.onclick=()=>{
+        window.open('https://tungsten-ai.netlify.app',target='_blank');
+    }
+    busi.onclick=()=>{
+        window.open('https://bauxxite.netlify.app',target='_blank');
+    }
+    spor.onclick=()=>{
+        window.open('https://silicon-js.netlify.app',target='_blank');
+    }
 
 </script>
 </body>
