@@ -28,6 +28,7 @@ h1{
 body{
     background: #a7fcfc;
     background: linear-gradient(90deg, rgb(255 240 190) 0%, rgb(240 255 184) 100%);
+    overflow: hidden;
 }
 #container{
     display: flex;
