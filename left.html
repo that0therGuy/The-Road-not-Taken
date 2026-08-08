@@ -243,12 +243,15 @@
 
 
     document.querySelector('#spor').addEventListener('click',()=>{
+        navigator.clipboard.writeText('jayesh.programming@gmail.com');
+
 
         new TypeIt(".clip", {
             strings: 'Copied!',
             speed: 1,
             waitUntilVisible: true,
         }).go();
+
 
         setTimeout(function(){
             document.querySelector('.clip').innerHTML=''
@@ -257,6 +260,9 @@
 
 
 
+    })
+    document.querySelector('#spor').addEventListener('click',()=>{
+        window.open('https://github.com/that0therguy')
     })
 
 </script>
