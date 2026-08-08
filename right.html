@@ -14,40 +14,65 @@
         <div class="buttons">
 
             <div class="button">
+                <div class="imgdiv">
 
-                <img src="mario.gif" id="mario" width="75">
-                <p class="click" id="comp">Computers</p><br>
-                <pre id="compl"> </pre>
+                    <img src="lsd.gif" id="mario" width="75">
+                    <p class="click" id="comp">Silicon-Py</p><br>
+                </div>
+
+                <div class="prediv">
+                    <pre id="compl"> </pre>
+
+
+                </div>
             </div>
             <div class="button">
-                <img src="what.gif" id="die" width="75">
+                <div class="imgdiv">
 
-                <p class="click" id="acad">Academia</p><br>
-                <pre id="acadl"> </pre>
+                    <img src="homer.gif" id="die" width="75">
+                    <p class="click" id="acad">Tungsten</p><br>
+                </div>
 
+                <div class="prediv">
+                    <pre id="acadl"> </pre>
+
+                </div>
             </div>
+
         </div>
         <div class="h1div2">
 
-            <h1>My Travelling<br><span id="road">necessities</span></h1>
+            <h1>My Fabulous <br><span id="road">Projects</span></h1>
 
         </div>
 
         <img src="squid.gif" id="what" width="200">
         <div class="buttons">
+
             <div class="button">
-                <img src="money.gif" id="money" width="75">
+                <div class="imgdiv">
 
-                <p class="click" id="busi">Business</p><br>
-                <pre id="busil"> </pre>
+                    <img src="birb.gif" id="money" width="75">
+                    <p class="click" id="busi">Bauxxite</p><br>
+                </div>
 
+                <div class="prediv">
+                    <pre id="busil"> </pre>
+
+                </div>
             </div>
+
             <div class="button">
-                <img src="mush.gif" id="mush" width="75">
+                <div class="imgdiv">
 
-                <p class="click" id="spor">Sports</p><br>
-                <pre id="sporl"> </pre>
+                    <img src="mush.gif" id="mush" width="65">
+                    <p class="click" id="spor">Aurum</p><br>
+                </div>
 
+                <div class="prediv">
+                    <pre id="sporl"> </pre>
+
+                </div>
             </div>
         </div>
     </div>
@@ -64,6 +89,15 @@
 
 
 <style>
+    h1{
+        font-family: 'Astloch';
+        font-size: clamp(5vw, 1vw, 3rem);
+        margin: 0;
+        background: linear-gradient(45deg, rgb(200 127 54), rgb(179 70 66));
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
 
     .infobox{
         opacity:0;
@@ -109,7 +143,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap:0;
+        gap:15px;
     }
     .h1div{
         display: flex;
@@ -122,7 +156,8 @@
         top:50%;
         z-index:10;
         transition: all .4s;
-    }.click{
+    }
+    .click{
          transition: all .3s;
          text-decoration:underline;
          text-decoration-inset: 40px;
@@ -147,6 +182,48 @@
         font-family:'pirata one';
 
     }
+    .prediv{
+        border:1px solid rgb(179 92 66);
+        padding:7px;
+        border-radius:3px;
+        text-align:center;
+        width:10em;
+
+    }
+    pre{
+        margin:0;
+        text-wrap: wrap;
+        font-family: 'astloch' !important;
+    }
+    .imgdiv{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .scroll{
+        margin:0;
+        font-size:15px;
+        font-family: 'Pirata one';
+        background-color:transparent;
+        border:none;
+        color:rgb(179 92 66);
+        letter-spacing: 2px;
+    }
+    @media screen and (max-width: 480px) {
+        .h1div{
+            flex-direction: column;
+        }
+    }@media screen and (max-width: 1280px) {
+        .h1div{
+            gap:10px;
+
+        }
+        .buttons{
+        }
+    }
+
+
 
 
 
@@ -227,7 +304,7 @@
     document.getElementById('comp').addEventListener('click',()=>{
 
         new TypeIt("#compl", {
-            strings: 'Engineering, gaming and Netflix',
+            strings: 'An Aesthetic and Feature-Rich Python Code Editor',
             speed: 1,
             waitUntilVisible: true,
         }).go();
@@ -239,7 +316,7 @@
     document.getElementById('acad').addEventListener('click',()=>{
 
         new TypeIt("#acadl", {
-            strings: 'Science, Technology and Philosophy',
+            strings: 'A Unique Experiment to Push AI to Its Limits via Debating.',
             speed: 1,
             waitUntilVisible: true,
         }).go();
@@ -251,7 +328,7 @@
     document.getElementById('spor').addEventListener('click',()=>{
 
         new TypeIt("#sporl", {
-            strings: 'Football, Badminton, Table Tennis',
+            strings: 'A Centralized Place to Store Your Game Keys and Strategize.',
             speed: 1,
             waitUntilVisible: true,
         }).go();
@@ -263,7 +340,7 @@
     document.getElementById('busi').addEventListener('click',()=>{
 
         new TypeIt("#busil", {
-            strings: 'Buying and Selling Video Games',
+            strings: 'A Console-Like Frontend For Games.',
             speed: 1,
             waitUntilVisible: true,
         }).go();
@@ -272,6 +349,10 @@
 
 
     })
+    comp.click()
+    busi.click()
+    spor.click()
+    acad.click()
 
 </script>
 </body>

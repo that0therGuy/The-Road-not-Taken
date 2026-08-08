@@ -4,32 +4,261 @@
     <meta charset="UTF-8">
     <title>The Road Not Taken</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/typeit@8.8.7/dist/index.umd.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <div id="container">
     <div class="h1div">
-        <div class="button">
-            <p class='left' id="0">M</p>
-            <p class='left' id="1">y</p>
-            <pre class='left' id="2"> </pre>
-            <p class='left' id="3">S</p>
-            <p class='left' id="4">t</p>
-            <p class='left' id="5">o</p>
-            <p class='left' id="6">r</p>
-            <p class='left' id="7">y</p>
-        </div>
-        <h1>My Chosen<br><span id="road">Road</span></h1>
 
+        <div class="buttons">
+
+            <div class="button">
+                <div class="imgdiv">
+
+                    <img src="star.gif" id="mario" width="75">
+                    <p class="click" id="comp">Github</p><br>
+                </div>
+
+
+            </div>
+
+
+        </div>
+        <div class="h1div2">
+
+            <h1>Software<br><span id="road">Engineer</span></h1>
+
+        </div>
+
+        <img src="spider.gif" id="what" width="300">
+        <div class="buttons">
+
+
+
+            <div class="button">
+                <div class="imgdiv">
+
+                    <img src="poke.gif" id="mush" width="100">
+                    <p class="click" id="spor">Email</p><br>
+                    <p class="clip"></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="infobox">
+        <h2 id="h"></h2>
+        <p id="p"></p>
     </div>
 
 
 
 </div>
-<Script src="index.js"></Script>
+
+
 <style>
     h1{
-        text-align: center;
+        font-family: 'Astloch';
+        font-size: clamp(5vw, 1vw, 3rem);
+        margin: 0;
+        background: linear-gradient(45deg, rgb(200 127 54), rgb(179 70 66));
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
     }
+
+    .infobox{
+        opacity:0;
+        display:none;
+        width:0;
+        height:0;
+        border:2px solid #9f795c;
+        border-radius:7px;
+        background: linear-gradient(45deg, rgb(200 115 54 / 0.1) 0%, rgb(179 147 66 / 0.1) 100%);
+        transition: all .5s;
+        padding:30px;
+        font-family: 'astloch', cursive;
+        font-size:2em;
+        color: #937656;
+        font-weight:800;
+        text-decoration-inset: 40px;
+        text-underline-offset: 10px;
+        flex-direction: column;
+        gap:20px;
+        text-align:center;
+        max-height:fit-content !important;
+        overflow-y: auto;
+
+
+
+    }
+    .clip{
+        font-size:15px;
+    }
+    #h,#p{
+        margin:0;
+        padding:0;
+    }
+    h1{
+        text-align: center;
+        transition: all 2s;
+    }
+    .buttons{
+
+        gap:90px;
+    }
+    .button{
+        display: flex;
+        margin:0;
+        padding:0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap:15px;
+    }
+    .h1div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:100px;
+    }
+    #what{
+        position:absolute;
+        top:50%;
+        z-index:10;
+        transition: all .4s;
+    }
+    .click{
+        transition: all .3s;
+        text-decoration:underline;
+        text-decoration-inset: 40px;
+        text-underline-offset: 20px;
+
+    }
+    .click:hover{
+        transform: scale(1.02);
+        text-decoration-inset: 0;
+    }
+    #road{
+        text-shadow: 0 0 5px #ff865f;
+
+    }
+    p{
+        font-family:'Fredericka the Great';
+        font-weight:bolder;
+        margin:10px;
+    }
+    #compl,#acadl,#busil,#sporl{
+        font-size:.5em;
+        font-family:'pirata one';
+
+    }
+    .prediv{
+        border:1px solid rgb(179 92 66);
+        padding:7px;
+        border-radius:3px;
+        text-align:center;
+        width:10em;
+
+    }
+    pre{
+        margin:0;
+        text-wrap: wrap;
+        font-family: 'astloch' !important;
+    }
+    .imgdiv{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+    .scroll{
+        margin:0;
+        font-size:15px;
+        font-family: 'Pirata one';
+        background-color:transparent;
+        border:none;
+        color:rgb(179 92 66);
+        letter-spacing: 2px;
+    }
+    @media screen and (max-width: 480px) {
+        .h1div{
+            flex-direction: column;
+        }
+    }@media screen and (max-width: 1280px) {
+        .h1div{
+            gap:10px;
+
+        }
+        .buttons{
+        }
+    }
+
+
+
+
+
+
+
 </style>
+
+<script>
+
+
+
+    let comp= document.querySelector('#comp');
+    let acad= document.querySelector('#acad');
+    let spor= document.querySelector('#spor');
+    let busi= document.querySelector('#busi');
+
+    comp.addEventListener('mouseenter',()=>{
+        spor.classList.add('na');
+
+        comp.classList.remove('na');
+
+    })
+    comp.addEventListener('mouseleave',()=>{
+        comp.classList.remove('na');
+        spor.classList.remove('na');
+    })
+
+
+
+
+    spor.addEventListener('mouseenter',()=>{
+        comp.classList.add('na');
+
+        spor.classList.remove('na');
+
+    })
+    spor.addEventListener('mouseleave',()=>{
+        comp.classList.remove('na');
+        spor.classList.remove('na');
+    })
+
+
+
+    document.querySelector('#spor').addEventListener('click',()=>{
+
+        new TypeIt(".clip", {
+            strings: 'Copied!',
+            speed: 1,
+            waitUntilVisible: true,
+        }).go();
+
+        setTimeout(function(){
+            document.querySelector('.clip').innerHTML=''
+        },3000)
+
+
+
+
+    })
+
+</script>
 </body>
 </html>
