@@ -237,6 +237,7 @@
         body{
             scale:.9;
         }
+
     }
     @media screen and (max-width: 1280px) {
 
@@ -252,19 +253,23 @@
 
 
 
+
 </style>
 
 <script>
+    if (window.innerWidth > 1400) {
+        gsap.registerPlugin(SplitText)
+        let split = SplitText.create("h1", { type: "words, chars"  });
 
-    gsap.registerPlugin(SplitText)
-    let split = SplitText.create("h1", { type: "words, chars"  });
+
+        gsap.from(split.chars, {
+            duration: 1,
+            autoAlpha: 0,
+            stagger: 0.04,
+        });
+    }
 
 
-    gsap.from(split.chars, {
-        duration: 1,
-        autoAlpha: 0,
-        stagger: 0.04,
-    });
 
     let comp= document.querySelector('#comp');
     let acad= document.querySelector('#acad');

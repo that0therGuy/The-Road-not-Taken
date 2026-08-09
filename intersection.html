@@ -99,31 +99,34 @@
 
 </style>
 <script>
-    gsap.registerPlugin(SplitText)
-    let split = SplitText.create(".inters", { type: "words, chars"  });
+    if (window.innerWidth > 1400) {
+        gsap.registerPlugin(SplitText)
+        let split = SplitText.create(".inters", { type: "words, chars"  });
 
 
-    gsap.from(split.chars, {
-        duration: 1,
-        y: -50,
-        autoAlpha: 0,
-        stagger: 0.05,
-    });
-    let split2 = SplitText.create(".ection", { type: "words, chars"  });
-    gsap.from(split2.chars, {
-        duration: 1,
-        y: 50,
-        autoAlpha: 0,
-        stagger: {
-            each: 0.05,
-            from: "end"
-        }    });
-    let split3 = SplitText.create(".eh", { type: "words, chars"  });
-    gsap.from(split3.words, {
-        duration: 1,
-        autoAlpha: 0,
-        stagger: 0.05,
-    });
+        gsap.from(split.chars, {
+            duration: 1,
+            y: -50,
+            autoAlpha: 0,
+            stagger: 0.05,
+        });
+        let split2 = SplitText.create(".ection", { type: "words, chars"  });
+        gsap.from(split2.chars, {
+            duration: 1,
+            y: 50,
+            autoAlpha: 0,
+            stagger: {
+                each: 0.05,
+                from: "end"
+            }    });
+        let split3 = SplitText.create(".eh", { type: "words, chars"  });
+        gsap.from(split3.words, {
+            duration: 1,
+            autoAlpha: 0,
+            stagger: 0.05,
+        });
+    }
+
 
 
 
