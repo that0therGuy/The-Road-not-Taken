@@ -98,6 +98,7 @@
     }
     .clip{
         font-size:15px;
+        transition: font-size 1s;
     }
     #h,#p{
         margin:0;
@@ -251,6 +252,8 @@
 
     document.querySelector('#spor').addEventListener('click',()=>{
         navigator.clipboard.writeText('jayesh.programming@gmail.com');
+        document.querySelector('.clip').style.fontSize = '15px';
+
 
 
         new TypeIt(".clip", {
@@ -262,6 +265,10 @@
 
         setTimeout(function(){
             document.querySelector('.clip').innerHTML=''
+            document.querySelector('.clip').style.fontSize = '0';
+
+
+
         },3000)
 
 
