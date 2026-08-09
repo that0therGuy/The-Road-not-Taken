@@ -219,6 +219,7 @@
 
 <script>
     if (window.innerWidth > 1400) {
+        console.log(window.innerWidth);
         gsap.registerPlugin(SplitText)
         let split = SplitText.create("h1", { type: "words, chars"  });
 
